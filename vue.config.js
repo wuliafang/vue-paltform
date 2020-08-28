@@ -18,7 +18,7 @@ proxies.forEach(proxy => {
 
 
 module.exports = {
-  publicPath: process.env.VUE_APP_IS_CND ? "http://qiniu.com/" : "./",
+  publicPath: process.env.VUE_APP_IS_CND ? "http://qiniu.com/vue-paltform/dist/" : "./",
   // publicPath: '/', // 部署应用时的根路径(默认'/'),也可用相对路径(存在使用限制)
   // outputDir: 'dist', // 运行时生成的生产环境构建文件的目录(默认''dist''，构建之前会被清除)
   // assetsDir: '', // 放置生成的静态资源(s、css、img、fonts)的(相对于 outputDir 的)目录(默认'')
@@ -33,7 +33,7 @@ module.exports = {
   //   }
   //   // subpage: 'src/subpage/main.js'//官方解释：当使用只有入口的字符串格式时,模板会被推导为'public/subpage.html',若找不到就回退到'public/index.html',输出文件名会被推导为'subpage.html'
   // },
-  lintOnSave: true, // 是否在保存的时候检查
+  lintOnSave: false, // 是否在保存的时候检查
   productionSourceMap: true, // 生产环境是否生成 sourceMap 文件
   // css: {
   //   extract: true,// 是否使用css分离插件 ExtractTextPlugin

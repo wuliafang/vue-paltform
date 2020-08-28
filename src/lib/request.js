@@ -1,3 +1,6 @@
+/**
+ * Created by zff on 2020/08/27.
+ */
 import axios from 'axios'
 import { loginoutMessage } from './auth';
 
@@ -35,24 +38,38 @@ instance.interceptors.response.use(
     const { data } = response
     const { code } = data
      
+    if (code !== 10000) {
+      Message({
+        message: data.message || 'Error',
+        type: 'error',
+        duration: 5 * 1000
+      })
 
-    // 登录失效错误码
-    const loginout_code = ['10001', '10003', '10002', '0004', '0003', '0001'];
-
-    if (loginout_code.includes(code)) { 
-      // 重新登录
-      loginoutMessage();
-      return Promise.resolve(null)
+      // 登录失效错误码
+      const loginout_code = ['10001', '10003', '10002', '0004', '0003', '0001'];
+      if (loginout_code.includes(code)) { 
+        // 重新登录
+        loginoutMessage();
+        return Promise.resolve(null)
+      }
+    } else {
+      return data
     }
+    
 
     try {
-      return Promise.resolve(res)
+      return Promise.resolve(data)
     } catch (err) {
       return Promise.resolve(null)
     } 
   },
   error => {
-    return Promise.resolve(error)
+    Message({
+      message: error.message,
+      type: 'error',
+      duration: 5 * 1000
+    })
+    return Promise.reject(error)
   }
 )
 

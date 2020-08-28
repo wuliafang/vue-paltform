@@ -92,7 +92,7 @@ export default {
     box-shadow: 0px 25px 88px 0px rgba(11,15,53,0.08);
     border-radius: 5px;
     box-sizing: border-box;
-    /deep/
+    ::v-deep
     .login-form {
       .el-input {
         width: 100%;

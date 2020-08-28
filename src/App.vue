@@ -1,12 +1,12 @@
 <template>
   <div id="app">
-    <Login />
-    <router-view />
+    <!-- <Login /> -->
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import Login from '@/views/login/index'
+// import Login from '@/views/login/index'
 export default {
   name: 'App',
   data() {
@@ -14,7 +14,12 @@ export default {
   },
   components: 
   {
-    Login
+    // Login
+  },
+  methods: {
+    tranfor() {
+      this.$router.push({path: '/login'})
+    }
   }
 }
 </script>
