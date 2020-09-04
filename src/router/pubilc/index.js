@@ -1,9 +1,22 @@
-import ratary from './modules/ratary'
 
-const commonRoutes = [
+// export default new Router({
+//   routes: [{
+//     path: '/',
+//     name: 'index',
+//     component: index,
+//     children: [{
+//       path: '',
+//       name: 'login',
+//       component: Login
+//     }]
+//   }]
+// })
+
+export default [
   {
     path: "/",
     name: '/',
+    redirect: '/',
     component: () => import(/* webpackChunkName: 'login' */ '../../views/login/index')
     // hidden: true
   },
@@ -14,8 +27,3 @@ const commonRoutes = [
     // hidden: true
   }
 ];
-
-export default [
-  ...commonRoutes,
-  ...ratary
-]
