@@ -1,0 +1,46 @@
+$titleColor:#2d405e; // 标题字体颜色
+$contentColor:#5b6985; // 内容字体颜色
+.el-table {
+    color: $contentColor;
+}
+
+.el-table th>.cell {
+    color: $titleColor;
+}
+
+// table清除下边框
+.el-table td {
+    border-bottom: none;
+}
+
+.el-table td,
+.el-table th {
+    padding: 0 0 !important;
+    box-sizing: border-box !important;
+    text-overflow: ellipsis !important;
+    vertical-align: middle !important;
+    position: relative !important;
+    height: 50px !important;
+}
+
+.el-table th.is-leaf {
+    background-color: #f6f7fc;
+    border-top: 1px solid;
+    border-color: #edf0f5;
+}
+
+// table条纹背景色 ecf4ff
+.el-table--striped .el-table__body tr.el-table__row--striped td {
+    background: #f6f7fc;
+}
+
+.el-table__body-wrapper .el-table__body .el-table__row:hover td {
+    background: #ecf4ff;
+}
+
+
+/* table hover 样式覆盖element-ui */
+
+.el-table--enable-row-hover .el-table__body-wrapper .el-table__body tr.el-table__row:hover>td {
+    background-color: #ECF4FF;
+}

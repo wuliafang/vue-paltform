@@ -1,9 +1,9 @@
 import Vue from 'vue'
-import Router from 'vue-router'
-import publicRouters from './pubilc'
-import limitedRouters from './limited'
+import VueRouter from 'vue-router'
+import  publicRouters from './pubilc'
+import  limitedRouters  from './limited'
 
-Vue.use(Router)
+Vue.use(VueRouter)
 
 
 /** 因为基于SPA模式开发，所以页面仅有一个，实现页面切换是利用哈希与组件的映射关系，
@@ -11,13 +11,12 @@ Vue.use(Router)
   切换到其他组件的时候，页面仍保持滚动之前的状态，这就是出现上述现象的原因。
   */
 
-const router = new Router({
+const router = new VueRouter({
   mode: 'hash',
-  routers: publicRouters.concat(limitedRouters),
+  routes: publicRouters.concat(limitedRouters),
   scrollBehavior(to, from, savedPosition) {
     return savedPosition || { x: 0, y: 0 };
   }
 })
 
-console.log(router)
 export default router;

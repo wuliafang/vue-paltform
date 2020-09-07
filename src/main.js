@@ -5,7 +5,6 @@ import './element-ui'
 
 Vue.config.productionTip = false
 
-console.log(router)
 new Vue({
   router,
   render: h => h(App)

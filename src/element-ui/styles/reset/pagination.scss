@@ -1,0 +1,117 @@
+$paginationColor:#879cbb;
+// 分页
+.el-pagination {
+    color: $paginationColor;
+    padding: 2px 0;
+}
+
+.el-pagination__total,
+.el-select.el-select--mini input {
+    color: $paginationColor
+}
+
+.el-pagination .el-select .el-input .el-input__inner {
+    border-radius: 32px;
+    background: #f9fafe;
+}
+
+.el-pagination__editor.el-input .el-input__inner {
+    border-radius: 32px;
+}
+
+.el-pagination .btn-prev,
+.el-pagination .btn-next {
+    height: 30px;
+    border-radius: 30px;
+    border: 1px solid #ddd;
+    text-align: center;
+    padding-right: 8px;
+    background: #f9fafe;
+    min-width: 28px;
+    color: $paginationColor
+}
+
+.el-block {
+    float: right;
+    margin-top: 20px 0;
+}
+
+.el-block .el-pagination button:disabled {
+    border: 1px solid #ddd;
+}
+
+
+/* .el-pagination .btn-prev:hover,
+.el-pagination .btn-next:hover {
+    border: 1px solid #409EFF;
+} */
+
+.el-select-dropdown__item {
+    color: $paginationColor
+}
+
+.el-pagination .btn-next {
+    padding-right: 0px;
+    padding-left: 2px;
+}
+
+.el-pagination .el-select .el-input .el-input__inner {
+    line-height: 33px;
+    height: 30px;
+}
+
+.el-pagination__total {
+    height: 30px;
+    line-height: 33px;
+}
+
+.el-input.el-pagination__editor.is-in-pagination {
+    width: 62px;
+    color: $paginationColor
+}
+
+.el-pager li.btn-quicknext,
+.el-pager li.btn-quickprev {
+    color: $paginationColor
+}
+
+.el-input__suffix-inner {
+    margin-right: 5px;
+}
+
+.el-input.el-pagination__editor.is-in-pagination>input {
+    width: 58px;
+}
+
+.el-pagination__jump {
+    color: $paginationColor
+}
+
+.el-pagination.is-background .btn-prev,
+.el-pagination.is-background .btn-next {
+    margin: 0 5px;
+    color: #5D6985;
+    min-width: 30px;
+    border-radius: 30px;
+    border: 1px solid #DEE2EE;
+    background-color: #F9FAFE;
+}
+
+.el-pagination.is-background .btn-prev:hover,
+.el-pagination.is-background .btn-next:hover {
+    color: #5b6985;
+    border: 1px solid #DEE2EE;
+    background-color: #F9FAFE;
+}
+
+.el-pagination.is-background .btn-prev:active,
+.el-pagination.is-background .btn-next:active {
+    color: #5b6985;
+    border: 1px solid #DEE2EE;
+    background-color: #EBEEF5;
+}
+
+.el-pagination.is-background .el-pager li:not(.disabled).active {
+    background-color: #fff;
+    color: #4090FF;
+}

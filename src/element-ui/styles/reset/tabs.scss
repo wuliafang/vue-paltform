@@ -1,0 +1,23 @@
+.el-tabs--card > .el-tabs__header .el-tabs__nav{
+	border: none;
+}
+.el-tabs--card > .el-tabs__header .el-tabs__item:first-child{
+	border-left: 1px solid #DEE2EE;
+}
+.el-tabs--card > .el-tabs__header .el-tabs__item{
+	height: 35px;
+	line-height: 35px;
+	color: $--color-text-regular;
+	border: 1px solid $--border-color-base;
+	border-radius: 4px 4px 0 0;
+	background-color: #f9fafe;
+	&:nth-child(n + 2) {
+		margin-left: 10px;
+	}
+}
+.el-tabs--card > .el-tabs__header .el-tabs__item.is-active{
+	color: #2D405E;
+	background-color: #fff;
+	font-weight: bold;
+	border-bottom: 1px solid #fff;
+}

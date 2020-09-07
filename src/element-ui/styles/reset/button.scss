@@ -1,0 +1,249 @@
+$contentColor:#5b6985; // 内容字体颜色
+.el-button.el-button--default {
+    color: $contentColor;
+    border: 1px solid #DEE2EE;
+    background-color: #F9FAFE;
+}
+
+.el-button.el-button--default:hover,
+.el-button.el-button--default:focus {
+    color: $contentColor;
+    border: 1px solid #DEE2EE;
+    background-color: #F9FAFE;
+}
+
+.el-button.el-button--default:active {
+    color: $contentColor;
+    border: 1px solid #DEE2EE;
+    background-color: #EBEEF5;
+}
+
+// 灰色按钮统一样式
+.el-button.el-button--info {
+    color: #F9FAFE;
+    border: 1px solid #DEE2EE;
+    background-color: #F9FAFE;
+    outline: none;
+    outline: none;
+    color: $contentColor;
+}
+
+.el-button.el-button--info:active {
+    background-color: #82848a;
+    color: #5B6985;
+    border: 1px solid #DEE2EE;
+}
+
+.el-button.el-button--info:focus,
+.el-button.el-button--info:hover {
+    background-color: #fff;
+    color: #5B6985;
+    border: 1px solid #DEE2EE;
+}
+
+.el-button {
+    min-width: 90px;
+    padding: 0 10px;
+    height: 34px;
+    text-align: center;
+    line-height: 34px;
+}
+
+.el-button--default {
+    min-width: 90px;
+    padding: 0 10px;
+    height: 34px;
+    text-align: center;
+    line-height: 34px;
+}
+
+.el-button--text {
+    width: auto;
+}
+
+.el-button--default,
+.el-button--danger,
+.el-button--success,
+.el-button--primary,
+.el-button--warning,
+.el-button--info {
+    &.el-button--big {
+        &.el-button {
+            min-width: 110px;
+            height: 34px;
+            line-height: 34px;
+        }
+    }
+}
+
+.el-button--default,
+.el-button--danger,
+.el-button--success,
+.el-button--primary,
+.el-button--warning,
+.el-button--info {
+    &.el-button--middle {
+        &.el-button {
+            min-width: 60px;
+            height: 34px;
+            line-height: 34px;
+        }
+    }
+}
+
+.el-button--default,
+.el-button--danger,
+.el-button--success,
+.el-button--primary,
+.el-button--warning,
+.el-button--info {
+    &.el-button--small {
+        &.el-button {
+            padding: 0px 0px;
+            min-width: 90px;
+            height: 30px;
+            line-height: 30px;
+        }
+    }
+}
+
+.el-button--default,
+.el-button--danger,
+.el-button--success,
+.el-button--primary,
+.el-button--warning,
+.el-button--info {
+    &.el-button--mini {
+        &.el-button {
+            padding: 0px 0px;
+            min-width: 60px;
+            height: 24px;
+            line-height: 23px;
+            text-align: center;
+            font-size: 12px;
+        }
+        &.el-font-color-red {
+            color: #F76359;
+        }
+    }
+}
+
+// 成功按钮
+.el-button--success {
+    color: #fff;
+    background-color: #06bea4;
+    border-color: #06bea4;
+}
+
+.el-button--success:focus,
+.el-button--success:hover {
+    background: #06ccb0;
+    border-color: #06ccb0;
+    color: #fff;
+}
+
+.el-button--success:active {
+    background: #00a481;
+    border-color: #00a481;
+    color: #fff;
+}
+
+.el-table .el-button {
+    color: $contentColor;
+}
+
+// 警告
+.el-button--warning {
+    color: #fff;
+    background-color: #f5b923;
+    border-color: #f5b923;
+}
+
+.el-button--warning:focus,
+.el-button--warning:hover {
+    background: #ffc726;
+    border-color: #ffc726;
+    color: #fff
+}
+
+.el-button--warning.is-active,
+.el-button--warning:active {
+    background: #f19e00;
+    border-color: #f19e00;
+    color: #fff
+}
+
+// 危险
+.el-button--danger {
+    color: #fff;
+    background-color: #f76359;
+    border-color: #f76359;
+}
+
+.el-button--danger:focus,
+.el-button--danger:hover {
+    background: #ff6b60;
+    border-color: #ff6b60;
+    color: #fff
+}
+
+.el-button--danger.is-active,
+.el-button--danger:active {
+    background: #f32b1f;
+    border-color: #f32b1f;
+    color: #fff
+}
+
+.el-button-text--danger {
+    color: #f76359;
+}
+
+.el-button-text--danger:focus,
+.el-button-text--danger:hover {
+    color: #ff6b60;
+}
+
+.el-button-text--danger.is-active,
+.el-button-text--danger:active {
+    color: #f32b1f;
+}
+
+//主题颜色
+.el-button--primary {
+    color: #fff;
+    background-color: #4090FF;
+    border-color: #4090FF;
+}
+
+.el-button--primary:hover {
+    color: #fff;
+    background-color: #4ba8ff;
+    border-color: #4090FF;
+}
+
+.el-button--primary:focus {
+    background-color: #4090FF;
+}
+
+.el-button--primary:active {
+    background-color: #1074ff;
+}
+
+// el-button 圆角 去除padding
+.el-button.is-round {
+    padding: 0;
+}
+
+// 按钮公共样式
+.el-button+.el-button {
+    margin-left: 0 !important
+}
+
+// .el-select .is-focus .el-input .el-input__inner:focus-within {
+//   color: transparent !important;
+//   text-shadow: 0 0 0 #000;
+// }
+// .el-select  .el-input  .el-input__inner:focus {
+//   color: transparent !important;
+//   // text-shadow: 0 0 0 #000;
+// }

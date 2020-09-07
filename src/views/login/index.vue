@@ -70,7 +70,6 @@ export default {
             password: this.loginForm.passWord.trim(),
             device_type: 2
           });
-          console.log(result)
          } else {
            return false;
          }

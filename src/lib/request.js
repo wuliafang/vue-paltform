@@ -3,6 +3,7 @@
  */
 import axios from 'axios'
 import { loginoutMessage } from './auth';
+import { Message } from 'element-ui'
 
 const instance = axios.create({
   baseURL: window.location.origin,
@@ -34,24 +35,25 @@ instance.interceptors.request.use(
 
 // 响应拦截器
 instance.interceptors.response.use(
-  response => {
+  (response) => {
     const { data } = response
     const { code } = data
-     
+
+    
+    // 登录失效错误码
+    const loginout_code = ['10001', '10003', '10002', '0004', '0003', '0001'];
+    // 重新登录
+    if (loginout_code.includes(code)) { 
+      loginoutMessage();
+      return Promise.resolve(null)
+    } 
+
     if (code !== 10000) {
       Message({
-        message: data.message || 'Error',
+        message: data.msg || 'Error',
         type: 'error',
         duration: 5 * 1000
       })
-
-      // 登录失效错误码
-      const loginout_code = ['10001', '10003', '10002', '0004', '0003', '0001'];
-      if (loginout_code.includes(code)) { 
-        // 重新登录
-        loginoutMessage();
-        return Promise.resolve(null)
-      }
     } else {
       return data
     }

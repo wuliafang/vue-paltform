@@ -1,0 +1,32 @@
+@import "./button.scss";
+@import "./pagination.scss";
+@import "./upload.scss";
+@import "./table.scss";
+@import "./dialog.scss";
+@import "./form.scss";
+@import"./input.scss";
+@import"./select.scss";
+@import"./tag.scss";
+@import"./tabs.scss";
+
+/* 级联选择器 cascader hover 样式覆盖element-ui */
+
+.el-cascader-menu .el-cascader-menu__item:focus:not(:active),
+.el-cascader-menu .el-cascader-menu__item:hover {
+    background-color: #ECF4FF;
+    color: #4090FF;
+    font-weight: 400;
+}
+
+.el-cascader-node:not(.is-disabled):hover,
+.el-cascader-node:not(.is-disabled):focus {
+    background-color: #ECF4FF;
+    font-weight: 400;
+}
+
+.el-cascader-node.in-active-path,
+.el-cascader-node.is-selectable.in-checked-path,
+.el-cascader-node.is-active {
+    color: #4090FF;
+    font-weight: 400;
+}
